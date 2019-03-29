@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<!-- 2019-03-26T13:52:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="charts_HSQLDB_dummySQL" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3fa1f92c-28b0-4364-ae2f-90154ceb52b1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="487"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="500"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="467"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="526"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="repository\samples\dataadapeter\HsqldbDataAdapter_inMemory_dummy.xml"/>
+	<property name="net.sf.jasperreports.data.adapter" value="/samples\dataadapeter\HsqldbDataAdapter_inMemory_dummy.xml"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "employee_id" , "full_name" , "position_title" , "birth_date" , "hire_date" , "salary"
+FROM 
+(VALUES 
+(1, 'Sheri Nowmer', 'President', '1961-08-26', '2009-12-01 00:00:00.0', '80000'),
+(2, 'Derrick Whelply', 'VP Country Manager', '1915-07-03', '2009-12-01 00:00:00.0', '40000'),
+(4, 'Michael Spence', 'VP Country Manager', '1969-06-20', '2013-01-01 00:00:00.0', '40000'),
+(5, 'Maya Gutierrez', 'VP Country Manager', '1951-05-10', '2013-01-01 00:00:00.0', '35000'),
+(6, 'Roberta Damstra', 'VP Information Systems', '1942-10-08', '2009-12-01 00:00:00.0', '25000'),
+(7, 'Rebecca Kanagaki', 'VP Human Resources', '1949-03-27', '2009-12-01 00:00:00.0', '15000'),
+(8, 'Kim Brunner', 'Store Manager', '1922-08-10', '2013-01-01 00:00:00.0', '10000'),
+(9, 'Brenda Blumberg', 'Store Manager', '1979-06-23', '2013-01-01 00:00:00.0', '17000'),
+(10, 'Darren Stanz', 'VP Finance', '1949-08-26', '2009-12-01 00:00:00.0', '50000'),
+(11, 'Jonathan Murraiin', 'Store Manager', '1967-06-20', '2013-01-01 00:00:00.0', '15000')
+) s("employee_id" , "full_name" , "position_title" , "birth_date" , "hire_date" , "salary")]]>
+	</queryString>
+	<field name="employee_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="employee_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="full_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="full_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="position_title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="position_title"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="birth_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="birth_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="hire_date" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="hire_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<field name="salary" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="584" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="300" uuid="fa56f664-7e54-47ce-9264-abad55ae2660"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Bar">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="legend.enabled">
+							<hc:propertyExpression><![CDATA[Boolean.TRUE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.series.dataLabels.enabled">
+							<hc:propertyExpression><![CDATA["true"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text" value=""/>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[Boolean.FALSE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset/>
+						<dataAxis axis="Rows">
+							<axisLevel name="position">
+								<labelExpression><![CDATA["String"]]></labelExpression>
+								<axisLevelBucket order="None" class="java.lang.String">
+									<bucketExpression><![CDATA[$F{position_title}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns"/>
+						<multiAxisMeasure name="salary" class="java.math.BigDecimal" calculation="Nothing">
+							<labelExpression><![CDATA["Measure label expression"]]></labelExpression>
+							<valueExpression><![CDATA[$F{salary}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="salary"/>
+				</hc:chart>
+			</componentElement>
+			<componentElement>
+				<reportElement x="0" y="310" width="555" height="274" uuid="c2d1beb6-e6c2-4229-b1ba-7df4234c62a0"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Pie">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="title.text" value=""/>
+						<hc:chartProperty name="credits.enabled" value="false"/>
+						<hc:chartProperty name="credits.href" value=""/>
+						<hc:chartProperty name="credits.text" value=""/>
+						<hc:chartProperty name="yAxis.title.text" value=""/>
+						<hc:chartProperty name="chart.zoomType" value="xy"/>
+						<hc:chartProperty name="com.jaspersoft.studio.highcharts.dataconfiguration.simple" value="true"/>
+						<hc:chartProperty name="plotOptions.pie.showInLegend" value="true"/>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset/>
+						<dataAxis axis="Rows">
+							<axisLevel name="Level1">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.lang.Comparable">
+									<bucketExpression><![CDATA[$F{full_name}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="Measure1" class="java.lang.Number" calculation="Nothing">
+							<labelExpression><![CDATA["!MEASURE LABEL!"]]></labelExpression>
+							<valueExpression><![CDATA[$F{salary}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

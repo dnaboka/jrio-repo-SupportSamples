@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.2.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HSQLDB" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b5284aae-5496-49db-9d12-bed8088e26e7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="repository\dataadapeter\HsqldbDataAdapter.xml"/>
+	<property name="net.sf.jasperreports.data.adapter" value="/dataadapeter\HsqldbDataAdapter.xml"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="superuser"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/customer_cases/HSQL_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/customer_cases/HSQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "ADDRESS"."ID",
+	"ADDRESS"."FIRSTNAME",
+	"ADDRESS"."LASTNAME",
+	"ADDRESS"."STREET",
+	"ADDRESS"."CITY"
+FROM "ADDRESS"]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="FIRSTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FIRSTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="LASTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="LASTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="STREET" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="STREET"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<field name="CITY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CITY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ADDRESS"/>
+	</field>
+	<title>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="30" uuid="11218379-fa8c-405f-a145-edfe99e670f7"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Address details; HSQLDB Northwind"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="5ac2a816-f275-4adc-a4be-f501c1688d42">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6ff1f777-6bc5-43be-b874-d2a44fcc7759"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="b805ec64-23ba-4205-a560-4fcbcff7fd41">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f78b303-2ed0-4f73-86b1-2eee98cb11cb"/>
+				</reportElement>
+				<text><![CDATA[FIRSTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="f4595506-6798-47fb-a7e6-bc2b96f107e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3fd4b947-2b8f-4580-acd4-c69374911fba"/>
+				</reportElement>
+				<text><![CDATA[LASTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="b2783857-1204-482e-ab9d-780360d96e1f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc4be5d2-5acc-4488-b793-2f47fcafe4ea"/>
+				</reportElement>
+				<text><![CDATA[STREET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="65e3f7d7-e1db-4097-903d-931d256efca0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd497542-c6b7-4fb1-81ce-0d8a5ae7c391"/>
+				</reportElement>
+				<text><![CDATA[CITY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="3d704ff8-6d7a-4920-9b8c-562a15faf9ce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6ff1f777-6bc5-43be-b874-d2a44fcc7759"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="30" uuid="25d48e25-fa6e-4f9f-a1fd-6849a285271b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5f78b303-2ed0-4f73-86b1-2eee98cb11cb"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{FIRSTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="30" uuid="3df0674e-8cd2-4bd8-ae5c-004bb3e85afe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3fd4b947-2b8f-4580-acd4-c69374911fba"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{LASTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="30" uuid="b89de02b-6a6a-4948-8c47-b0c5d3d65dd4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc4be5d2-5acc-4488-b793-2f47fcafe4ea"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{STREET}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="30" uuid="b1ae1297-5329-4911-adef-736771294d7b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd497542-c6b7-4fb1-81ce-0d8a5ae7c391"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CITY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
